@@ -84,8 +84,8 @@ function updateGameArea() {
         }
     }
     myGameArea.clear();
-    myGameArea.frameNo += 10;
-    if (myGameArea.frameNo == 1 || everyinterval(1200)) {
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(120)) {
         x = myGameArea.canvas.width;
         minHeight = 20;
         maxHeight = 200;
@@ -100,7 +100,7 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-    myScore.text="SCORE: " + myGameArea.frameNo/10;
+    myScore.text="SCORE: " + myGameArea.frameNo;
     myScore.update();
     myGamePiece.newPos();
     myGamePiece.update();
